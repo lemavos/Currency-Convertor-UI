@@ -88,11 +88,12 @@ currencies = {
 def open_root():
     root = tk.Tk()
     root.title("Currencies and Countries")
-    root.configure(background="black")
+    root.configure(background="white")
+    root.resizable(False, False)
     
     # Add a Listbox to display currencies and countries
-    listbox = tk.Listbox(root, width=60, height=20,background="black",foreground="white")
-    listbox.pack(padx=10, pady=10,)
+    listbox = tk.Listbox(root, width=60, height=20, background="white", foreground="black", font=("Arial", 11, "bold"))
+    listbox.pack(padx=10, pady=10)
 
     # Populate the Listbox with currency codes, names, and countries
     for code, details in currencies.items():
